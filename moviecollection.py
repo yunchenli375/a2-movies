@@ -40,3 +40,6 @@ class MovieCollection:
         with open(filename, "w") as file:
             json.dump([vars(movie) for movie in self.movies], file)
 
+    def add_movie(self, movie):
+        """Add a Movie instance to the collection."""
+        self.movies.append(movie)
