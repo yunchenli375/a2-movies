@@ -24,4 +24,13 @@ def run_tests():
     assert initial_movie.year == 2017
     assert initial_movie.category == "Comedy"
     assert initial_movie.is_watched is True
+    # TODO: Add more tests, as appropriate, for each method
+    unwatched_movie = Movie("The Shining", 1980, "Thriller", False)
+    print("Test unwatched movie:")
+    print(unwatched_movie)
+    unwatched_movie.mark_watched()
+    assert unwatched_movie.is_watched is True
+    unwatched_movie.mark_unwatched()
+    assert unwatched_movie.is_watched is False
+
 
