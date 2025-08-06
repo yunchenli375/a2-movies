@@ -28,3 +28,6 @@ class Movie:
         """Class method to create a Movie instance from a dict for deserialization."""
         return Movie(**dict_data)
 
+    def class_data_fields():
+        """Returns a list of data fields of the class"""
+        return list(vars(Movie()).keys())
