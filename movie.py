@@ -11,3 +11,7 @@ class Movie:
         self.category = category
         self.is_watched = is_watched
 
+    def __str__(self) -> str:
+        """Returns a string representation of the movie.
+        This function matches requirements from assignment 2."""
+        return f"{self.title} ({self.year} {self.category}){' watched' if self.is_watched else ''}"
