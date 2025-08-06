@@ -37,4 +37,11 @@ def run_tests():
     # Test saving
     movie_collection.save_movies("movies.json")
 
+    # Test more methods
+    assert movie_collection.get_number_of_unwatched_movies() == 4
+    assert movie_collection.get_number_of_watched_movies() == 2
+    movie_collection.movies[0].mark_watched()
+    assert movie_collection.get_number_of_unwatched_movies() == 3
+    assert movie_collection.get_number_of_watched_movies() == 3
+
 
