@@ -34,4 +34,7 @@ def run_tests():
     movie_collection.sort("title")
     print(movie_collection)
 
+    # Test saving
+    movie_collection.save_movies("movies.json")
+
 
