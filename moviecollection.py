@@ -28,3 +28,10 @@ class MovieCollection:
     # because it mixes file handling with data management.
     # The save/load function should only handle the serialization of movie data with a file-like object, instead of a specific file path.
     # Because of the immutable tests in test_moviecollection.py, these functions have to accept a filename as their parameter.
+    def load_movies(self, filename):
+        """Loads movies from a JSON file into the collection."""
+        with open(filename) as file:
+            self.movies = [
+                Movie.from_dict(movie_data) for movie_data in json.load(file)
+            ]
+
