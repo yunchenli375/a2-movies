@@ -14,3 +14,7 @@ class MovieCollection:
     def __init__(self):
         """Initializes a empty MovieCollection."""
         self.movies = []
+
+    def get_number_of_watched_movies(self):
+        """Returns the number of unwatched movies in the collection."""
+        return sum(1 for movie in self.movies if movie.is_watched)
