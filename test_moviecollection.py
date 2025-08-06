@@ -21,3 +21,9 @@ def run_tests():
         movie_collection.movies
     )  # Assuming file is non-empty; non-empty list is considered True
 
+    # Test adding a new Movie with values
+    print("Test adding new movie:")
+    movie_collection.add_movie(Movie("Amazing Grace", 2006, "Drama", False))
+    print(movie_collection)
+
+
