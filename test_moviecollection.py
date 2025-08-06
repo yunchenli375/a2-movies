@@ -45,3 +45,4 @@ def run_tests():
     assert movie_collection.get_number_of_watched_movies() == 3
 
 
+run_tests()
