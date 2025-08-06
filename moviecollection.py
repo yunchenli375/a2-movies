@@ -35,3 +35,8 @@ class MovieCollection:
                 Movie.from_dict(movie_data) for movie_data in json.load(file)
             ]
 
+    def save_movies(self, filename):
+        """Saves the movie collection to a JSON file."""
+        with open(filename, "w") as file:
+            json.dump([vars(movie) for movie in self.movies], file)
+
