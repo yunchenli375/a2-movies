@@ -20,3 +20,7 @@ class Movie:
         """Marks the movie as watched."""
         self.is_watched = True
 
+    def mark_unwatched(self):
+        """Marks the movie as unwatched."""
+        self.is_watched = False
+
