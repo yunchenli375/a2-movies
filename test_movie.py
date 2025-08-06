@@ -34,3 +34,4 @@ def run_tests():
     assert unwatched_movie.is_watched is False
 
 
+run_tests()
