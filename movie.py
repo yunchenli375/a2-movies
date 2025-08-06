@@ -24,3 +24,7 @@ class Movie:
         """Marks the movie as unwatched."""
         self.is_watched = False
 
+    def from_dict(dict_data):
+        """Class method to create a Movie instance from a dict for deserialization."""
+        return Movie(**dict_data)
+
