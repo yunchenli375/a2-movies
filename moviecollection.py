@@ -43,3 +43,10 @@ class MovieCollection:
     def add_movie(self, movie):
         """Add a Movie instance to the collection."""
         self.movies.append(movie)
+
+    def sort(self, key):
+        """Sorts the movies in the collection by a given key, then the title."""
+        if key not in Movie.class_data_fields():
+            key = "title"
+        self.movies.sort(key=attrgetter(key, "title"))
+
