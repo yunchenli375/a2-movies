@@ -15,3 +15,8 @@ class Movie:
         """Returns a string representation of the movie.
         This function matches requirements from assignment 2."""
         return f"{self.title} ({self.year} {self.category}){' watched' if self.is_watched else ''}"
+
+    def mark_watched(self):
+        """Marks the movie as watched."""
+        self.is_watched = True
+
