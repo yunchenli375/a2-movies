@@ -26,4 +26,12 @@ def run_tests():
     movie_collection.add_movie(Movie("Amazing Grace", 2006, "Drama", False))
     print(movie_collection)
 
+    # Test sorting movies
+    print("Test sorting - year:")
+    movie_collection.sort("year")
+    print(movie_collection)
+    print("Test sorting - title:")
+    movie_collection.sort("title")
+    print(movie_collection)
+
 
