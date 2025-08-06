@@ -70,3 +70,7 @@ class MovieCollection:
         )
         return "\n".join(lines)
 
+    def get_statistics_info(self):
+        """Returns a string describing the statistics of current collection.
+        This function matches requirements from assignment 2."""
+        return f"{self.get_number_of_unwatched_movies()} movies still to watch, {self.get_number_of_watched_movies()} watched"
