@@ -50,3 +50,23 @@ class MovieCollection:
             key = "title"
         self.movies.sort(key=attrgetter(key, "title"))
 
+    def __str__(self):
+        """Returns a formatted representation of the movie collection.
+        This function matches requirements from assignment 1"""
+        # Calculate the width information based on the longest title and index in the collection, for pretty printing.
+        title_column_width = (
+            max(len(movie.title) for movie in self.movies) if self.movies else 0
+        )
+        index_width = len(str(len(self.movies)))
+        # A temporary container to hold the formatted movie details.
+        lines = []
+        for i, movie in enumerate(self.movies):
+            lines.append(
+                f"{i + 1:>{index_width}}. {' ' if movie.is_watched else '*'} {movie.title:<{title_column_width}} - {movie.year:>{self.YEAR_WIDTH}} ({movie.category})"
+            )
+        # The final stastistics line.
+        lines.append(
+            f"{self.get_number_of_watched_movies()} movies watched. {self.get_number_of_unwatched_movies()} movies still to watch."
+        )
+        return "\n".join(lines)
+
