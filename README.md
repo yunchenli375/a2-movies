@@ -20,3 +20,13 @@ A Python project with GUI and Console programs that (re)use classes to manage a 
 
 PyCharm is satisfying to use. Especially after learning its keyboard shortcuts in editor. Checking the references of a variable or function is very useful, so I can quickly ensure the ongoing modification will not break the feature. The integrated debugger allowed me to step through code execution and identify issues efficiently, particularly when debugging the console program. The code completion and syntax highlighting features helped catch errors early in the development process. Additionally, PyCharm's refactoring tools made it easy to rename variables and methods across the entire project while maintaining consistency. The built-in version control integration also streamlined the process of tracking changes and managing different iterations of the code.
 
+## 3. What are you least satisfied with?
+
+Those inexplicably subtle distinction of requirements between assignment 1 and assignment 2 with no reasonable or logical explanation.
+
+1. The watched status in movies_backup.csv from assignment 1 is gratuitously inconsistent from the movies_backup.json from assignment 2. For example, the movie entitled "The Fugitive" is not watched in assignment 1, but watched in assignment 2.
+2. The format of watching status is different. In assignment 1, the required format is "6 movies watched. 1 movies still to watch". However, in assignment 2, it becomes "3 movies still to watch, 2 watched".
+3. The "Other" category in assignment 1 becomes "Fantasy" in assignment 2.
+
+These capricious changes forcing students juggling with deliberately inconsistent data and meaningless data requirement changes is lazy assignment design that serves little educational purpose and hinders skill development of actual programming concepts. Those superficial variations create busywork wasting valuable learning time on nonsense details.
+
