@@ -75,3 +75,18 @@ def get_non_empty_string(prompt):
     return value
 
 
+def watch_movie(collection: MovieCollection):
+    """Mark a movie as watched based on user input."""
+    if all(movie.is_watched for movie in collection.movies):
+        print("No more movies to watch!")
+        return
+    print("Enter the movie number to mark watched")
+    index = get_valid_movie_index(len(collection.movies))
+    if collection.movies[index].is_watched:
+        print(f"You have already watched {collection.movies[index].title}.")
+        return
+    collection.movies[index].is_watched = True
+    print(
+        f"{collection.movies[index].title} ({collection.movies[index].year}) watched."
+    )
+
