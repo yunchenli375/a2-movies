@@ -54,3 +54,14 @@ def add_movie(collection):
     )
     collection.sort("year")
 
+
+def get_valid_category(categories=CATEGORIES):
+    """Returns a valid index of categories from the user."""
+    print(f"Categories available: {', '.join(category for category in categories)}")
+    choice = get_non_empty_string("Category: ").title()
+    try:
+        return categories.index(choice)
+    except ValueError:
+        print(f"Invalid category; using {categories[-1]}")
+        return len(categories) - 1
+
