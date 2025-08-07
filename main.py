@@ -34,3 +34,13 @@ class MoviesApp(App):
     sort_fields = ListProperty()
     statistics_text = StringProperty()
     state_text = StringProperty()
+
+    def __init__(self, **kwargs):
+        """Initialize the app."""
+        super().__init__(**kwargs)
+        self.collection = MovieCollection()
+        self.collection.load_movies(DATA_FILE_JSON)
+        self.sort_fields = list(SPINNER_ITEM_TO_FIELD.keys())
+        self.state_text = ""
+        self.statistics_text = self.collection.get_statistics_info()
+        self.sort_key = FALLBACK_SORT_KEY
