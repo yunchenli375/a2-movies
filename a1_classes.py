@@ -41,3 +41,16 @@ def main():
     print(f"{len(movie_collection.movies)} movies saved to movies.json")
     print("Have a nice day :)")
 
+
+def add_movie(collection):
+    """Get a new movie from the user with validation."""
+    title = get_non_empty_string("Title: ")
+    year = get_positive_integer("Year: ")
+    category = CATEGORIES[get_valid_category(CATEGORIES)]
+    new_movie = Movie(title, year, category, False)
+    collection.add_movie(new_movie)
+    print(
+        f"{new_movie.title} ({new_movie.category} from {new_movie.year}) added to movie list."
+    )
+    collection.sort("year")
+
