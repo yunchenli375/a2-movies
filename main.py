@@ -65,3 +65,8 @@ class MoviesApp(App):
             entry.collection_index = i
             self.root.ids.container.add_widget(entry)
 
+    def handle_sort_key_selection(self, key_name):
+        """Updates the sort key"""
+        self.sort_key = SPINNER_ITEM_TO_FIELD.get(key_name, FALLBACK_SORT_KEY)
+        self.refresh_dynamic_widgets()
+
