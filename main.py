@@ -70,3 +70,14 @@ class MoviesApp(App):
         self.sort_key = SPINNER_ITEM_TO_FIELD.get(key_name, FALLBACK_SORT_KEY)
         self.refresh_dynamic_widgets()
 
+    def on_movie_button_press(self, button):
+        """Toggles the watched status of the movie whose button was pressed"""
+        movie = self.collection.movies[button.collection_index]
+        if movie.is_watched:
+            movie.mark_unwatched()
+            self.state_text = f"You need to watch {movie.title}"
+        else:
+            movie.mark_watched()
+            self.state_text = f"You have watched {movie.title}"
+        self.statistics_text = self.collection.get_statistics_info()
+        self.refresh_dynamic_widgets()
