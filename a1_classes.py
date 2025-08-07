@@ -119,3 +119,5 @@ def get_positive_integer(prompt=">>> "):
     return int(value)
 
 
+if __name__ == "__main__":
+    main()
