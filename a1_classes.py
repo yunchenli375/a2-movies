@@ -90,3 +90,13 @@ def watch_movie(collection: MovieCollection):
         f"{collection.movies[index].title} ({collection.movies[index].year}) watched."
     )
 
+
+def get_valid_movie_index(movie_count):
+    """Returns a valid movie index(0-based) from the user."""
+    choice = get_positive_integer()
+    while choice > movie_count:
+        print("Invalid movie number")
+        choice = get_positive_integer()
+    return choice - 1
+
+
