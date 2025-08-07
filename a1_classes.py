@@ -65,3 +65,13 @@ def get_valid_category(categories=CATEGORIES):
         print(f"Invalid category; using {categories[-1]}")
         return len(categories) - 1
 
+
+def get_non_empty_string(prompt):
+    """Get a non-empty string input from the user."""
+    value = input(f"{prompt}")
+    while not value:
+        print("Input can not be blank")
+        value = input(f"{prompt}")
+    return value
+
+
