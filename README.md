@@ -34,3 +34,7 @@ These capricious changes forcing students juggling with deliberately inconsisten
 
 My analysis of the requirement and the design of classes and functions is thorough enough, so there is no large refactor that makes everything rewrite from scratch. The modular approach I took with separating concerns between different classes helped maintain clean code structure. I also effectively reused existing code patterns from previous work, which saved development time. The decoupling of fundamental functionalities and the interactive interfaces is a success.
 
+## 5. What about your process could be improved the next time you do a project like this?
+
+When designing the GUI program, I will draw a diagram to describe the dependencies of objects, properties and widgets, along with those interactions among them. This visual representation would help me better understand the data flow and event handling before implementation, potentially reducing debugging time and improving code organization. I may create some tests to ensure the correctness and robustness of every part of the GUI program, instead of simply trial and error. Setting up a more structured development workflow with regular commits and clear milestone targets would also help track progress more effectively and make it easier to revert changes if needed.
+
