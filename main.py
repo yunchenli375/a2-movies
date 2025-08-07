@@ -124,3 +124,5 @@ class MoviesApp(App):
         self.refresh_dynamic_widgets()
 
 
+if __name__ == "__main__":
+    MoviesApp().run()
