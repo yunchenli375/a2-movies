@@ -35,3 +35,15 @@ BoxLayout:
         Button:
             text: 'Clear'
             on_press: app.handle_clear()
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: app.statistics_text
+            size_hint_y: 0.1
+        BoxLayout:
+            orientation: 'vertical'
+            id: container
+        Label:
+            text: app.state_text
+            size_hint_y: 0.1
+
