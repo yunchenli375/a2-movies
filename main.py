@@ -81,3 +81,8 @@ class MoviesApp(App):
             self.state_text = f"You have watched {movie.title}"
         self.statistics_text = self.collection.get_statistics_info()
         self.refresh_dynamic_widgets()
+
+    def on_stop(self):
+        """Saves the data before the program quits"""
+        self.collection.save_movies(DATA_FILE_JSON)
+
