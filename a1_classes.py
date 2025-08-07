@@ -100,3 +100,22 @@ def get_valid_movie_index(movie_count):
     return choice - 1
 
 
+def get_positive_integer(prompt=">>> "):
+    """Get a valid positive integer input from the user."""
+    # Reason for not using IndexError and exception pattern:
+    # This function can be reused for both year and movie index inputs.
+    # Because when displaying the movie list, the index starts from 1, instead of 0.
+    # Therefore this function follows the principle of don't repeat yourself.
+    # Using IndexError to handle bad movie index input is re-implementing the same logic.
+    value = input(f"{prompt}")
+    while not value.isdigit() or int(value) < 1:
+        try:
+            _erroneous_value = int(value)
+            print("Number must be >= 1")
+        except ValueError:
+            # isdigit() returns False for negative numbers
+            print("Invalid input; enter a valid number")
+        value = input(f"{prompt}")
+    return int(value)
+
+
