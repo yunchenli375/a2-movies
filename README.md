@@ -38,3 +38,4 @@ My analysis of the requirement and the design of classes and functions is thorou
 
 When designing the GUI program, I will draw a diagram to describe the dependencies of objects, properties and widgets, along with those interactions among them. This visual representation would help me better understand the data flow and event handling before implementation, potentially reducing debugging time and improving code organization. I may create some tests to ensure the correctness and robustness of every part of the GUI program, instead of simply trial and error. Setting up a more structured development workflow with regular commits and clear milestone targets would also help track progress more effectively and make it easier to revert changes if needed.
 
+Learning resources
