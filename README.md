@@ -38,4 +38,7 @@ My analysis of the requirement and the design of classes and functions is thorou
 
 When designing the GUI program, I will draw a diagram to describe the dependencies of objects, properties and widgets, along with those interactions among them. This visual representation would help me better understand the data flow and event handling before implementation, potentially reducing debugging time and improving code organization. I may create some tests to ensure the correctness and robustness of every part of the GUI program, instead of simply trial and error. Setting up a more structured development workflow with regular commits and clear milestone targets would also help track progress more effectively and make it easier to revert changes if needed.
 
-Learning resources
+## 6. Describe what learning resources you used and how you used them
+
+The Python documentation. Writing the json representation of an object by hand is very tedious, so does creating an object from the json key-value paris. I found that the internal link of an instance of a class, the built-in associated container dict and the key-value representation in json format. Given a constructor of a class, the double asterisk operator can unpack a built-in dict object, to pass its values as arguments of the constructor, and using the built-in function vars can obtain a dict representation of all data fields from a given object. And the json from the standard library supports the serialization and deserialization processes of dict object. Using this approach makes me write least boilerplate code when interacting with the json data format.
+
