@@ -28,3 +28,9 @@ FALLBACK_SORT_KEY = "title"
 CATEGORIES = ["Action", "Comedy", "Documentary", "Drama", "Fantasy", "Thriller"]
 
 
+class MoviesApp(App):
+    """Main kivy program class"""
+
+    sort_fields = ListProperty()
+    statistics_text = StringProperty()
+    state_text = StringProperty()
