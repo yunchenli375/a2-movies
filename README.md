@@ -30,3 +30,7 @@ Those inexplicably subtle distinction of requirements between assignment 1 and a
 
 These capricious changes forcing students juggling with deliberately inconsistent data and meaningless data requirement changes is lazy assignment design that serves little educational purpose and hinders skill development of actual programming concepts. Those superficial variations create busywork wasting valuable learning time on nonsense details.
 
+## 4. What worked well in your development process?
+
+My analysis of the requirement and the design of classes and functions is thorough enough, so there is no large refactor that makes everything rewrite from scratch. The modular approach I took with separating concerns between different classes helped maintain clean code structure. I also effectively reused existing code patterns from previous work, which saved development time. The decoupling of fundamental functionalities and the interactive interfaces is a success.
+
