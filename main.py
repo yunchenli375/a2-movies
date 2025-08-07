@@ -44,3 +44,10 @@ class MoviesApp(App):
         self.state_text = ""
         self.statistics_text = self.collection.get_statistics_info()
         self.sort_key = FALLBACK_SORT_KEY
+
+    def build(self):
+        """Build the GUI"""
+        self.title = PROGRAM_NAME
+        self.root = Builder.load_file(GUI_LAYOUT)
+        self.refresh_dynamic_widgets()
+        return self.root
