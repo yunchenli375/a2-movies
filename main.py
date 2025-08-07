@@ -86,3 +86,10 @@ class MoviesApp(App):
         """Saves the data before the program quits"""
         self.collection.save_movies(DATA_FILE_JSON)
 
+    def handle_clear(self):
+        """Clears the input fields and state text"""
+        self.root.ids.input_title.text = ""
+        self.root.ids.input_category.text = ""
+        self.root.ids.input_year.text = ""
+        self.state_text = ""
+
