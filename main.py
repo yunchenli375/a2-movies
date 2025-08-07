@@ -51,3 +51,17 @@ class MoviesApp(App):
         self.root = Builder.load_file(GUI_LAYOUT)
         self.refresh_dynamic_widgets()
         return self.root
+
+    def refresh_dynamic_widgets(self):
+        """add buttons for each movie in the collection"""
+        self.root.ids.container.clear_widgets()
+        self.collection.sort(self.sort_key)
+        for i, movie in enumerate(self.collection.movies):
+            entry = Button(text=str(movie))
+            entry.background_color = (
+                COLOR_WATCHED if movie.is_watched else COLOR_UNWATCHED
+            )
+            entry.bind(on_press=self.on_movie_button_press)
+            entry.collection_index = i
+            self.root.ids.container.add_widget(entry)
+
