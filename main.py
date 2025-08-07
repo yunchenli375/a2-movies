@@ -93,3 +93,34 @@ class MoviesApp(App):
         self.root.ids.input_year.text = ""
         self.state_text = ""
 
+    def handle_add(self):
+        """Attempts to add a new movie"""
+        input_title = self.root.ids.input_title.text.strip()
+        input_category = self.root.ids.input_category.text.strip().capitalize()
+        input_year = self.root.ids.input_year.text.strip()
+        if any(
+            input_value == ""
+            for input_value in (input_title, input_category, input_year)
+        ):
+            self.state_text = "All fields must be completed"
+            return
+        try:
+            converted_input_year = int(input_year)
+        except ValueError:
+            self.state_text = "Please enter a valid number"
+            return
+        if converted_input_year < 0:
+            self.state_text = "Year must be >=0"
+            return
+        if input_category not in CATEGORIES:
+            self.state_text = f"Category must be one of {', '.join(CATEGORIES)}"
+            return
+        new_movie = Movie(
+            title=input_title, year=converted_input_year, category=input_category
+        )
+        self.collection.add_movie(new_movie)
+        self.handle_clear()
+        self.statistics_text = self.collection.get_statistics_info()
+        self.refresh_dynamic_widgets()
+
+
